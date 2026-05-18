@@ -81,6 +81,10 @@ export default function RequestDetail() {
             <dd className="text-gray-800">{request.category_name || '—'}</dd>
           </div>
           <div>
+            <dt className="text-gray-400">Prioridad</dt>
+            <dd><PriorityBadge priority={request.priority} /></dd>
+          </div>
+          <div>
             <dt className="text-gray-400">Solicitante</dt>
             <dd className="text-gray-800">{request.user_name}</dd>
           </div>

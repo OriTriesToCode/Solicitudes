@@ -1,6 +1,8 @@
 const router = require('express').Router()
 const { getAll, getById, create, update, remove } = require('../controllers/requests.controller')
+const { isAuthenticated } = require('../middleware/auth')
 
+router.get('/', isAuthenticated, getAll)
 router.get('/', getAll)
 router.get('/:id', getById)
 router.post('/', create)
